@@ -1,0 +1,19 @@
+name: ko-nect-env
+description: AI environment for urban transport optimization
+version: 1.0
+
+entry_point: env.environment:KoNectEnv
+
+observation_space:
+  time: int
+  active_drivers: int
+  available_trains: int
+  pending_issues: int
+  demand_level: str
+  delays: int
+  event: str
+
+action_space:
+  assign_drivers: int
+  add_trains: int
+  resolve_issues: int
